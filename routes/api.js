@@ -11,7 +11,6 @@ var zahirr = db.get("zahirr");
 var creatorList = ['@zahirrr','@zhirrrgans','@zhirr_ajalah','@zahiranjay', '@zahirganssss','@zhirrganteng','@zahirrgantengg'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
-
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
@@ -370,24 +369,6 @@ router.get('/infonpm', async (req, res, next) => {
                  creator : `${creator}`,
                  result,
                  message : `jangan lupa follow ${creator}`
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-
-
-router.get('/randomwallpaper', async (req, res, next) => {
-        var apikeyInput = req.query.apikey
-            
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
-
-             res.json({
-                 status : true,
-                 creator : `${creator}`,
-                 image : 'test'
              })
          })
          .catch(e => {
