@@ -360,7 +360,6 @@ router.get('/randomwallpaper', (req, res, next) => {
     var anu = await fetchJson(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`, {method: 'get'})
     var n = JSON.parse(JSON.stringify(anu));
     var anjay = n[Math.floor(Math.random() * n.length)];
-        .then(response => response.json())
         .then(data => {
              res.json({
                  status : true,
