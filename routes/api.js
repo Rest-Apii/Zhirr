@@ -366,20 +366,18 @@ router.get('/randomkajian', async (req, res, next) => {
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
-
-             json = JSON.stringify({
-		status : true,
-		creator : `${creator}`,
-		result: {
-            ceramah : `${randomKajian}`
-			},
-	})
-} else {
-	json = JSON.stringify({
-		status: false
-	})
-}
-res.send(JSON.parse(json))
+	
+        .then(() => {
+              res.json({
+                  status: true,
+                  creator: `${creator}`,
+                  ceramah: `${randomKajian}`
+              })
+        })
+    } catch (e) {
+        console.log(e)
+        res.json(loghandler.error)
+    }
 })
 
 router.get('/infonpm', async (req, res, next) => {
