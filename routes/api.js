@@ -351,26 +351,26 @@ router.get('/randomquote', (req, res, next) => {
          .catch(e => {})
 })
 
-router.get('/randomwallpaper', (req, res, next) => {
-    var apikey = req.query.apikey
+router.get('/wallpaper/cyberspace', async (req, res, next) => {
+        var apikeyInput = req.query.apikey
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
 
-    if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
-
-    var anu = await fetchJson(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`, {method: 'get'})
-    n = JSON.parse(JSON.stringify(anu));
-    anjay = n[Math.floor(Math.random() * n.length)];
+       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`))
+        .then(response => response.json())
         .then(data => {
+        var result = data;
              res.json({
                  status : true,
                  creator : `${creator}`,
-                 result : {
-                     image : anjay
-                 },
+                 image : result,
                  message : `jangan lupa follow ${creator}`
              })
          })
-         .catch(e => {})
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 })
 
 router.get('/infonpm', async (req, res, next) => {
