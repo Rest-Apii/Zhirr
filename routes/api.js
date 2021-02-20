@@ -19,7 +19,7 @@ var jsonKajian = {
     "ceramah5": "Ceramah Ustadz Adi Hidayat > Shalat saking pentingnya, telah turun perintahnya kepada nabi sebelumnya seperti nabi Zakaria yang dikaruniai anak nabi Yahya karena doanya dalam shalat. Namun, sebelum perintah shalat itu diperintahkan, nabi mengenalkan Allah terlebih dahulu\nZaman dahulu shalat yang dikerjakan sangat khusyuk walaupun panah menusuknya tapi ia tak bergeser sedikitpun karena saking nikmatnya shalat. Namun, pada zaman sekarang sangat berbeda sekali. Ada orang bahkan tidak sadar berapa rakaat sedang ia kerjakan dan hanya lisan yang mengucapkan beribadah kepada Allah, hati tidak\nShalat berarti doa yang bertujuan untuk selalu menginat Allah. Oleh karena itu, dalam kehidupan ada doa-doa yang kita terapkan seperti doa masuk masjid, doa makan untuk ingat kepada Allah setiap saat, hatinya selalu diisi Allah\nAkidah bukan sekedar keyakinan tetapi keyakinan yang membuat kita semakin kuat hubungannya dengan Allah. Sampai-sampai orang yang punya keyakinan tersebut akan melebihi keyakinannya, dia akan yakin sekalipun orang lain tidak percaya. Orang yang punya aqidah kuat akan percaya dengan kuat tanpa ragu-ragu. Aqidah nelahirkan iman. Jika aqidah kuat maka seluruh anggota tubuh tidak akan menyimpang dari perintah Allah.\nKonsep ketuhanan, nama Allah dalam syahadat yang kita ucapkan tidak hanya meluncur di lisan. Allah itu al-ahad yaitu satu yang tidak ada duanya. Tuhan mempunyai sifat yang berbeda dengan makhluk dan mempunyai kemampuan yang tidak sama dengan makhluk",
 }
 var barakallah = Object.values(jsonKajian)
-var randomKajian = barakallah[parseInt(Math.random() * barakallah.length)]
+var randomKajian = barakallah[parseInt(Math.random() * barakallah.length)];
 
 
 var ytdl = require('ytdl-core');
@@ -360,25 +360,6 @@ router.get('/randomquote', async (req, res, next) => {
 })
 })
 
-
-router.get('/randomkajian', async (req, res, next) => {
-        var apikeyInput = req.query.apikey
-            
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
-	
-        .then(() => {
-              res.json({
-                  status: true,
-                  creator: `${creator}`,
-                  ceramah: `${randomKajian}`
-              })
-        })
-    } catch (e) {
-        console.log(e)
-        res.json(loghandler.error)
-    }
-})
 
 router.get('/infonpm', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
