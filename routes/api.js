@@ -358,8 +358,8 @@ router.get('/randomwallpaper', (req, res, next) => {
     if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
 
     var anu = await fetchJson(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`, {method: 'get'})
-    var n = JSON.parse(JSON.stringify(anu));
-    var anjay = n[Math.floor(Math.random() * n.length)];
+    n = JSON.parse(JSON.stringify(anu));
+    anjay = n[Math.floor(Math.random() * n.length)];
         .then(data => {
              res.json({
                  status : true,
