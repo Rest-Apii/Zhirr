@@ -357,8 +357,9 @@ router.get('/wallpaper/cyberspace', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`))
-        .then(response => response.json())
+       var n = fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`))
+       .then(response => response.json())
+       n[Math.floor(Math.random() * n.length)];
         .then(data => {
         var result = data;
              res.json({
