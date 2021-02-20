@@ -23,6 +23,7 @@ var TikTokScraper = require('tiktok-scraper');
 var router  = express.Router();
 
 var { color, bgcolor } = require(__path + '/lib/color.js');
+var { fetchJson } = require('/lib/fetcher.js')
 var options = require(__path + '/lib/options.js');
 var {
 	Nulis,
@@ -343,6 +344,29 @@ router.get('/randomquote', (req, res, next) => {
                  result : {
                      author : `${data.author}`,
                      quotes : `${data.quotes}`,
+                 },
+                 message : `jangan lupa follow ${creator}`
+             })
+         })
+         .catch(e => {})
+})
+
+router.get('/randomwallpaper', (req, res, next) => {
+    var apikey = req.query.apikey
+
+    if (!apikey) return res.json(loghandler.notparam)
+    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
+
+    var anu = await fetchJson(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`, {method: 'get'})
+    var n = JSON.parse(JSON.stringify(anu));
+    var anjay = n[Math.floor(Math.random() * n.length)];
+        .then(response => response.json())
+        .then(data => {
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result : {
+                     image : anjay
                  },
                  message : `jangan lupa follow ${creator}`
              })
