@@ -37,7 +37,6 @@
     "morgan": "^1.10.0",
     "needle": "^2.6.0",
     "node-fetch": "^2.6.1",
-    "node-scrapy": "^0.5.0",
     "request": "^2.88.2",
     "scrape-yt": "^1.4.8",
     "ssl-express-www": "^3.0.7",
