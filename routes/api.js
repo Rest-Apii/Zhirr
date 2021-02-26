@@ -781,7 +781,7 @@ router.get('/kisahnabi', async (req, res, next) => {
 })
 
 router.get('/infogempa', async (req, res, next) => {
-	        var apikeyInput = req.query.apikey;
+	        var apikeyInput = req.query.apikey
 
 		if (!apikeyInput) return res.json(loghandler.notparam)
 		if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
