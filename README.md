@@ -18,6 +18,7 @@
 | Random Quotes | ✔️ |
 | Info NPM | ✔️ |
 | Short Link | ✔️ |
+| Kisah Para Nabi | ✔️ |
 | Text Maker | ✔️ |
 | Text Maker Game | ✔️ |
 | Text Maker Senja | ✔️ |
@@ -31,6 +32,7 @@
 | Random Quotes | api/randomquote?apikey=MASUKIN_APIKEY |
 | Info NPM | api/infonpm?query=zhirrr-api&hostname=zhirrr&apikey=MASUKAN_APIKEY |
 | Short Link | api/short/tiny?url=google.com&apikey=MASUKAN_APIKEY |
+| Kisah Nabi | api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY |
 | Text Maker Glitch | api/textmaker?text=halo&text2=hai&theme=glitch&apikey=MASUKIN_APIKEY |
 | Text Maker Google Suggestion | api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=MASUKIN_APIKEY |
 | Text Maker PUBG | api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=MASUKIN_APIKEY |
