@@ -17,6 +17,7 @@
 | Tiktok Stalk | ✔️ |
 | Random Quotes | ✔️ |
 | Info NPM | ✔️ |
+| Info Gempa | ✔️ |
 | Short Link | ✔️ |
 | Kisah Para Nabi | ✔️ |
 | Text Maker | ✔️ |
@@ -31,6 +32,7 @@
 | Tiktok Stalk | api/tiktod/stalk/?username=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Random Quotes | api/randomquote?apikey=MASUKIN_APIKEY |
 | Info NPM | api/infonpm?query=zhirrr-api&hostname=zhirrr&apikey=MASUKAN_APIKEY |
+| Info Gempa | api/infogempa?apikey=MASUKAN_APIKEY |
 | Short Link | api/short/tiny?url=google.com&apikey=MASUKAN_APIKEY |
 | Kisah Nabi | api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY |
 | Text Maker Glitch | api/textmaker?text=halo&text2=hai&theme=glitch&apikey=MASUKIN_APIKEY |
