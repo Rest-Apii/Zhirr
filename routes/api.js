@@ -798,4 +798,29 @@ router.get('/infogempa', async (req, res, next) => {
 		})
 })
 
+router.get('/hadits', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            kitab = req.query.kitab,
+            nomor = req.query.nomor
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+	if (!kitab) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kitab"})
+	if (!nomor) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nomor"})
+
+       fetch(encodeURI(`https://hadits-api-zhirrr.vercel.app/books/${kitab}/${nomor}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
 module.exports = router
