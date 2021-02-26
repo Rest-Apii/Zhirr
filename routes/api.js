@@ -407,6 +407,7 @@ router.get('/base', async (req, res, next) => {
 		encode = req.query.encode,
 		decode = req.query.decode,
 		apikeyInput = req.query.apikey;
+
 		if (!apikeyInput) return res.json(loghandler.notparam)
 		if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
 		if (!type) return res.json({status: false, creator, code: 404, message: 'masukan parameter type, type yang tersedia : base64 , base32'})
