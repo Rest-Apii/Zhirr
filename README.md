@@ -13,6 +13,7 @@
 | Menu | API | 
 |------------ | ---------|
 | Nulis | ✔️ |
+| Facebook Downloader | ✔️ |
 | Tiktok Downloader | ✔️ |
 | Tiktok Stalk | ✔️ |
 | Random Quotes | ✔️ |
@@ -21,6 +22,7 @@
 | Short Link | ✔️ |
 | Kisah Para Nabi | ✔️ |
 | Hadits Shahih | ✔️ |
+| Al Qur'an | ✔️ |
 | Text Maker | ✔️ |
 | Text Maker Game | ✔️ |
 | Text Maker Senja | ✔️ |
@@ -29,6 +31,7 @@
 | Menu | Endpoint | 
 |------------ | ---------|
 | Nulis | api/nulis?text=zahirganteng&apikey=MASUKIN_APIKEY |
+| Facebook Downloader | api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Tiktok Downloader | api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Tiktok Stalk | api/tiktod/stalk/?username=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Random Quotes | api/randomquote?apikey=MASUKIN_APIKEY |
@@ -37,6 +40,7 @@
 | Short Link | api/short/tiny?url=google.com&apikey=MASUKAN_APIKEY |
 | Kisah Nabi | api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY |
 | Hadits | api/hadits?kitab=bukhari&nomor=52&apikey=MASUKAN_APIKEY |
+| Qur'an | api/quran?surah=1&ayat=7&apikey=MASUKAN_APIKEY |
 | Text Maker Glitch | api/textmaker?text=halo&text2=hai&theme=glitch&apikey=MASUKIN_APIKEY |
 | Text Maker Google Suggestion | api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=MASUKIN_APIKEY |
 | Text Maker PUBG | api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=MASUKIN_APIKEY |
