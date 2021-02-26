@@ -780,22 +780,4 @@ router.get('/kisahnabi', async (req, res, next) => {
 		})
 })
 
-router.get('/infogempa', async (req, res, next) => {
-	        var apikeyInput = req.query.apikey
-
-		if (!apikeyInput) return res.json(loghandler.notparam)
-		if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
-		Gempa()
-		.then(result => {
-			res.json({
-				creator: creator,
-				result
-			})
-		})
-		.catch(e => {
-			console.log('Error :', color(e, 'red'))
-			res.json(loghandler.error)
-		})
-})
-
 module.exports = router
