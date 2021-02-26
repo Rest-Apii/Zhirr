@@ -29,7 +29,8 @@ var options = require(__path + '/lib/options.js');
 var {
 	Nulis,
 	Vokal,
-	Base
+	Base,
+	Igstalk
 } = require('./../lib');
 var cookie = "HSID=A7EDzLn3kae2B1Njb;SSID=AheuwUjMojTWvA5GN;APISID=cgfXh13rQbb4zbLP/AlvlPJ2xBJBsykmS_;SAPISID=m82rJG4AC9nxQ5uG/A1FotfA_gi9pvo91C;__Secure-3PAPISID=m82rJG4AC9nxQ5uG/A1FotfA_gi9pvo91C;VISITOR_INFO1_LIVE=RgZLnZtCoPU;LOGIN_INFO=AFmmF2swRQIhAOXIXsKVou2azuz-kTsCKpbM9szRExAMUD-OwHYiuB6eAiAyPm4Ag3O9rbma7umBK-AG1zoGqyJinh4ia03csp5Nkw:QUQ3MjNmeXJ0UHFRS3dzaTNGRmlWR2FfMDRxa2NRYTFiN3lfTEdOVTc4QUlwbUI4S2dlVngxSG10N3ZqcHZwTHBKano5SkN2dDlPSkhRMUtReE42TkhYeUVWS3kyUE1jY2I1QzA1MDZBaktwd1llWU9lOWE4NWhoZV92aDkxeE9vMTNlcG1uMU9rYjhOaDZWdno2ZzN3TXl5TVNhSjNBRnJaMExrQXpoa2xzRVUteFNWZDI5S0Fn;PREF=app=desktop&f4=4000000&al=id;SID=2wezCMTUkWN3YS1VmS_DXaEU84J0pZIQdemM8Zry-uzWm8y1njBpLTOpxSfN-EaYCRSiDg.;YSC=HCowA1fmvzo;__Secure-3PSID=2wezCMTUkWN3YS1VmS_DXaEU84J0pZIQdemM8Zry-uzWm8y1dajgWzlBh9TgKapGOwuXfA.;SIDCC=AJi4QfFK0ri9fSfMjMQ4tOJNp6vOb9emETXB_nf2S05mvr2jBlmeEvlSsQSzPMuJl_V0wcbL1r8;__Secure-3PSIDCC=AJi4QfGeWHx-c4uTpU1rXCciO1p0s2fJWU07KrkZhWyD1Tqi8LyR-kHuBwHY9mViVYu1fRh2PA";
 
@@ -751,6 +752,27 @@ router.get('/textmaker/senja', async (req, res, next) => {
         } else {
             res.json(loghandler.error)
         }
+})
+
+router.get('/igstalk', async (req, res, next) => {
+	var user = req.query.user,
+		apikeyInput = req.query.apikey;
+
+		if (!apikeyInput) return res.json(loghandler.notparam)
+		if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+		if (!username) return res.json(loghandler.notusername)
+		Igstalk(user)
+		.then(result => {
+			res.json({
+				status: true,
+				creator: creator,
+				result
+			})
+		})
+		.catch(e => {
+			console.log('Error :', color(e, 'red'))
+			res.json(loghandler.error)
+		})
 })
 
 module.exports = router
