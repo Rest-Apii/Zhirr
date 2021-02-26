@@ -797,5 +797,4 @@ router.get('/infogempa', async (req, res, next) => {
 			res.json(loghandler.error)
 		})
 })
-
 module.exports = router
