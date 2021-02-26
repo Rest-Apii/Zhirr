@@ -821,4 +821,50 @@ router.get('/hadits', async (req, res, next) => {
 })
 
 
+router.get('/quran', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            surah = req.query.surah,
+            ayat = req.query.ayat
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!surah) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter surah"})
+    if (!ayat) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter ayat"})
+
+       fetch(encodeURI(`https://alquran-apiii.vercel.app/surah/${surah}/${ayat}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/fbdown', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            url = req.query.url
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+
+       fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
 module.exports = router
