@@ -20,6 +20,7 @@
 | Info Gempa | ✔️ |
 | Short Link | ✔️ |
 | Kisah Para Nabi | ✔️ |
+| Hadits Shahih | ✔️ |
 | Text Maker | ✔️ |
 | Text Maker Game | ✔️ |
 | Text Maker Senja | ✔️ |
@@ -35,6 +36,7 @@
 | Info Gempa | api/infogempa?apikey=MASUKAN_APIKEY |
 | Short Link | api/short/tiny?url=google.com&apikey=MASUKAN_APIKEY |
 | Kisah Nabi | api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY |
+| Hadits | api/hadits?kitab=bukhari&nomor=52&apikey=MASUKAN_APIKEY |
 | Text Maker Glitch | api/textmaker?text=halo&text2=hai&theme=glitch&apikey=MASUKIN_APIKEY |
 | Text Maker Google Suggestion | api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=MASUKIN_APIKEY |
 | Text Maker PUBG | api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=MASUKIN_APIKEY |
