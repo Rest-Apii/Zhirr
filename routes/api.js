@@ -760,7 +760,7 @@ router.get('/kbbi', async (req, res, next) => {
 
 		if (!apikeyInput) return res.json(loghandler.notparam)
 		if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
-		if (!username) return res.json(loghandler.notusername)
+		if (!kata) return res.json(loghandler.notkata)
 		Kbbi(kata)
 		.then(result => {
 			res.json({
