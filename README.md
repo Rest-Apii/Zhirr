@@ -26,6 +26,8 @@
 | Text Maker | ✔️ |
 | Text Maker Game | ✔️ |
 | Text Maker Senja | ✔️ |
+| Text Maker Metallic | ✔️ |
+| Text Maker Alam | ✔️ |
 
 ## 🛠️ Endpoint-Api
 | Menu | Endpoint | 
@@ -47,6 +49,11 @@
 | Text Maker BattleField | api/textmaker/game?text=halo&text2=hai&theme=battlefield&apikey=MASUKIN_APIKEY |
 | Text Maker Coffee Cup | api/textmaker/senja?text=Zhirrr&theme=coffee-cup&apikey=MASUKIN_APIKEY |
 | Text Maker Coffee Cup 2 | api/textmaker/senja?text=Zhirrr&theme=coffee-cup2&apikey=MASUKIN_APIKEY |
+| Text Maker Neon | api/textmaker/metallic?text=Zhirrr&theme=neon&apikey=MASUKIN_APIKEY |
+| Text Maker Glow | api/textmaker/metallic?text=Zhirrr&theme=glow&apikey=MASUKIN_APIKEY |
+| Text Maker Summer | api/textmaker/alam?text=Zhirrr&theme=summer&apikey=MASUKIN_APIKEY |
+| Text Maker Flower | api/textmaker/alam?text=Zhirrr&theme=flower&apikey=MASUKIN_APIKEY |
+
 
 ## Cara Ganti ApiKey Gimana?
 Cara Mengganti Nya Cukup Gampang, Kalian Hanya Perlu Untuk Mengganti Syntax Di Bawah Ini
