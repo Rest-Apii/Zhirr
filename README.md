@@ -15,6 +15,7 @@
 | Islamic Api | ✔️ |
 | Wallpaper Api | ✔️ |
 | Search Wikipedia | ✔️ |
+| Film Drakor | ✔️ |
 | Nulis | ✔️ |
 | Facebook Downloader | ✔️ |
 | Tiktok Downloader | ✔️ |
@@ -39,6 +40,7 @@
 | Islamic Api | Lihat dalem nya aja yak, capek ngetikkk |
 | Wallpaper Api | Lihat dalem nya aja yak, capek ngetikkk |
 | Search Wikipedia | api/wikipedia?search=jembatan&apikey=MASUKAN_APIKEY |
+| Film Drakor | api/drakorasia?search=tale&apikey=MASUKAN_APIKEY |
 | Nulis | api/nulis?text=zahirganteng&apikey=MASUKIN_APIKEY |
 | Facebook Downloader | api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Tiktok Downloader | api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
