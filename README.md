@@ -12,6 +12,7 @@
 ## 🛠️ My-Api
 | Menu | API | 
 |------------ | ---------|
+| Islamic Api | ✔️ |
 | Nulis | ✔️ |
 | Facebook Downloader | ✔️ |
 | Tiktok Downloader | ✔️ |
@@ -32,6 +33,7 @@
 ## 🛠️ Endpoint-Api
 | Menu | Endpoint | 
 |------------ | ---------|
+| Islamic Api | Lihat dalem nya aja yak, capek ngetikkk |
 | Nulis | api/nulis?text=zahirganteng&apikey=MASUKIN_APIKEY |
 | Facebook Downloader | api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Tiktok Downloader | api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
