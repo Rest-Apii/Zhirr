@@ -16,6 +16,7 @@
 | Wallpaper Api | ✔️ |
 | Search Wikipedia | ✔️ |
 | Film Drakor | ✔️ |
+| Fake Data | ✔️ |
 | Nulis | ✔️ |
 | Facebook Downloader | ✔️ |
 | Tiktok Downloader | ✔️ |
@@ -42,6 +43,8 @@
 | Wallpaper Api | Lihat dalem nya aja yak, capek ngetikkk |
 | Search Wikipedia | api/wikipedia?search=jembatan&apikey=MASUKAN_APIKEY |
 | Film Drakor | api/drakorasia?search=tale&apikey=MASUKAN_APIKEY |
+| Fake Data | api/fakedata?country=en&apikey=MASUKAN_APIKEY |
+| Hilih Generator | api/hilih?kata=aku mah ganteng banget&apikey=MASUKAN_APIKEY |
 | Nulis | api/nulis?text=zahirganteng&apikey=MASUKIN_APIKEY |
 | Facebook Downloader | api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
 | Tiktok Downloader | api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY |
