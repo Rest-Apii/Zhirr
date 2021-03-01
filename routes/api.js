@@ -1464,4 +1464,26 @@ router.get('/drakorasia', async (req, res, next) => {
 })
 
 
+router.get('/jadwalshalat', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            kota = req.query.kota
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+        if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/Zhirrr-Database/main/adzan/${kota}/2021/03.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
 module.exports = router
