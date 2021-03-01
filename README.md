@@ -28,6 +28,7 @@
 | Kisah Para Nabi | ✔️ |
 | Hadits Shahih | ✔️ |
 | Al Qur'an | ✔️ |
+| Jadwal Shalat | ✔️ |
 | Text Maker | ✔️ |
 | Text Maker Game | ✔️ |
 | Text Maker Senja | ✔️ |
@@ -53,6 +54,7 @@
 | Kisah Nabi | api/kisahnabi?nabi=muhammad&apikey=MASUKAN_APIKEY |
 | Hadits | api/hadits?kitab=bukhari&nomor=52&apikey=MASUKAN_APIKEY |
 | Qur'an | api/quran?surah=1&ayat=7&apikey=MASUKAN_APIKEY |
+| Jadwal Shalat | api/jadwalshalat?kota=jakartautara&apikey=MASUKAN_APIKEY |
 | Text Maker Glitch | api/textmaker?text=halo&text2=hai&theme=glitch&apikey=MASUKIN_APIKEY |
 | Text Maker Google Suggestion | api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=MASUKIN_APIKEY |
 | Text Maker PUBG | api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=MASUKIN_APIKEY |
