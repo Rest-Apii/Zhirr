@@ -1739,4 +1739,25 @@ router.get('/quotes/kanye', async (req, res, next) => {
 })
 
 
+router.get('/translate', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+	    kata = req.query.kata
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+	if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
+       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/translate?text=${kata}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
 module.exports = router
