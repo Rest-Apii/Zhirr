@@ -100,7 +100,7 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 
 ### Link Zhirrr Packages
 
-https://www.npmjs.com/package/zahirr-api
+https://www.npmjs.com/package/zahir-api
 
 ### Special Thanks
-ZefianAlfian (Makasih Templates Nya, Hemat Lines Xixixixi)
+- ZefianAlfian (Makasih Templates Nya, Hemat Lines Xixixixi)
