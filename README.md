@@ -96,3 +96,11 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 - Gunakan Parameter Yg Sama Yak :)
 - 100 % Open Source
 - Rate This Repository Okeee 🎉
+
+
+### Link Zhirrr Packages
+
+https://www.npmjs.com/package/zahirr-api
+
+### Special Thanks
+ZefianAlfian (Makasih Templates Nya, Hemat Lines Xixixixi)
