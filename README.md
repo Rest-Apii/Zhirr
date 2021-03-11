@@ -101,7 +101,7 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 </p>
 
 # Live API
-* https://docs-api-zahirr.herokuapp.com
+* https://zahirr-web.herokuapp.com
 - Gunakan Parameter Yg Sama Yak :)
 - 100 % Open Source
 - Rate This Repository Okeee 🎉
