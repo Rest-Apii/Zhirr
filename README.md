@@ -105,6 +105,7 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 - Gunakan Parameter Yg Sama Yak :)
 - 100 % Open Source
 - Rate This Repository Okeee 🎉
+- Note : Untuk Melihat Update, Silahkan Ganti Branch Dari Repository ini ke Branch Master, Terimakasih :)
 
 
 ### Link Zhirrr Packages
