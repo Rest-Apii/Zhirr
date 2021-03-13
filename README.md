@@ -44,6 +44,14 @@
 | Text Maker Senja | ✔️ |
 | Text Maker Metallic | ✔️ |
 | Text Maker Alam | ✔️ |
+| Feature Lainnya | ✔️ |
+
+## 🛠️ Web Featured
+| Menu | Web | 
+|------------ | ---------|
+| Blog | ✔️ |
+| About Me | ✔️ |
+
 
 ## 🛠️ Endpoint-Api
 | Menu | Endpoint | 
@@ -104,13 +112,16 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 * https://zahirr-web.herokuapp.com
 - Gunakan Parameter Yg Sama Yak :)
 - 100 % Open Source
-- Rate This Repository Okeee 🎉
-- Note : Untuk Melihat Update, Silahkan Ganti Branch Dari Repository ini ke Branch Master, Terimakasih :)
+- Like This Repository Okeee 🎉
+- Note : Jangan Memperjual Belikan API Ini, Jika anda ingin memakai nya dan meRename dengan nama kalian Tidak Masalah, karena ini adalah Project API Open Source
+- Untuk Melihat Update Silakan Ganti Branch Ke "update1"
 
 
-### Link Zhirrr Packages
+### Link Zhirrr API Packages
 
 https://www.npmjs.com/package/zahir-api
 
 ### Special Thanks
-- ZefianAlfian (Makasih Templates Nya, Hemat Lines Xixixixi)
+- ZefianAlfian (Makasih Templates Nya, Xixixixi)
+- sProDev (Makasih Kodepos Nya Mank)
+- devnazir (Credits : FilmApik, LK21)
