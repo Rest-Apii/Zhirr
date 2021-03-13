@@ -19,7 +19,7 @@ window['CboxReady'] = function (Cbox) {
 <script src="https://static.cbox.ws/embed/1.js" async></script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="getvisitor(); getip();">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -428,6 +428,49 @@ window['CboxReady'] = function (Cbox) {
               <li class="breadcrumb-item active" aria-current="page">Beranda</li>
             </ol>
           </div>
+          
+          <div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Total API</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">81</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+<span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 98.2%</span>
+<span>Since last month</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-calendar fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+<div class="visitor" id="visitor">00</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+
+</span>
+<span>This web visitor</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-eye fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
 
           <div class="row mb-3">
             <!-- Earnings (Monthly) Card Example -->
@@ -541,5 +584,18 @@ window['CboxReady'] = function (Cbox) {
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
 </body>
+<script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/zahirr-web.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+  
+</script>
 
 </html>
