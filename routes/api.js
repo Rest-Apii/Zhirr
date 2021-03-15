@@ -344,7 +344,7 @@ router.get('/randomquote', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/random/quotes`))
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/randomquotes`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2493,5 +2493,258 @@ router.get('/textmaker/roses', async (req, res, next) => {
             res.json(loghandler.error)
         }
 })
+
+router.get('/yutub/video', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            url = req.query.url
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/yutub/audio', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            url = req.query.url
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/yta?url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/ig/stalk', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            username = req.query.username
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
+
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/stalk?username=${username}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/textmaker?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker2', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/textmaker2?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker3', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/textmaker3?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker4', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/textmaker4?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker3d', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/text3d?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker3d/no2', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/text3d-2?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker3d/no3', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/text3d-3?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/maker3d/no4', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            text = req.query.text
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+
+       fetch(encodeURI(`https://textmaker-api-zahirr.herokuapp.com/api/text3d-4?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Zhirrr',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 
 module.exports = router
