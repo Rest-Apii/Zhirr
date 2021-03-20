@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['@zahirrr','@zhirrrgans','@zhirr_ajalah','@zahiranjay', '@zahirganssss','@zhirrganteng','@zahirrgantengg'];
+var creatorList = ['@zahirrr','@zhirrrgans','@zhirr_ajalah','@zahiranjay', '@zahirganssss','@zhirrganteng','@zahirrgantengg', '@hafizh'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -383,6 +383,44 @@ router.get('/infonpm', async (req, res, next) => {
 })
 })
 
+router.get('/jadwal-bioskop', (req, res) => {
+var apikeyInput = req.query.apikey
+
+if(!apikeyInput) return res.json(loghandler.notparam)
+if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+const { default: Axios } = require('axios')
+const cheerio = require('cheerio')
+
+Axios.get('https://jadwalnonton.com/now-playing')
+.then(({ data }) => {
+     const $ = cheerio.load(data)
+     let title = []
+     let url = []
+     let img = []
+ 	$('div.row > div.item > div.clearfix > div.rowl > div.col-xs-6 > a').get().map((rest) => {
+         url.push($(rest).attr('href'))
+         })
+         $('div.row > div.item > div.clearfix > div.rowl > div.col-xs-6 > a > img').get().map((rest) => {
+        	title.push($(rest).attr('alt'))
+         })
+         $('div.row > div.item > div.clearfix > div.rowl > div.col-xs-6 > a > img').get().map((rest) => {
+        	img.push($(rest).attr('src'))
+         })
+     let result = []
+     for (let i = 0; i < url.length; i++) {
+          result.push({
+               	url: url[i],
+               	title: title[i],
+               	img: img[i]
+          })
+     }
+     res.send({
+     creator:  `${creator}`,
+     status: true,
+     result: result
+     })
+})
+})
 
 router.get('/short/tiny', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
