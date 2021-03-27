@@ -114,7 +114,7 @@ if(apikey != 'MASUKAN_NAMA_APIKEY') return res.json(loghandler.invalidKey)
 - 100 % Open Source
 - Like This Repository Okeee 🎉
 - Note : Jangan Memperjual Belikan API Ini, Jika anda ingin memakai nya dan meRename dengan nama kalian Tidak Masalah, karena ini adalah Project API Open Source
-- Untuk Melihat Update Silakan Ganti Branch Ke "update2"
+- Untuk Melihat Update Silakan Ganti Branch Ke "update3"
 
 
 ### Link Zhirrr API Packages
