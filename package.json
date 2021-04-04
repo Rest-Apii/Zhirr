@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZefianAlfian/z-rapi.git"
+    "url": "git+https://github.com/Rest-Apii/Zhirr.git"
   },
   "keywords": [
     "simple",
@@ -17,10 +17,10 @@
     "rest",
     "api"
   ],
-  "author": "ZefianAlfian",
+  "author": "Rest-Apii",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZefianAlfian/z-rapi/issues"
+    "url": "https://github.com/Rest-Apii/Zhirr/issues"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -48,5 +48,5 @@
     "ytdl-core": "^4.4.5",
     "ytpl": "^2.0.5"
   },
-  "homepage": "https://github.com/ZefianAlfian/z-rapi#readme"
+  "homepage": "https://github.com/Rest-Apii/Zhirr#readme"
 }
